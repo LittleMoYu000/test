@@ -23,19 +23,19 @@ class Group
 	
 	void mumber_reset()
 	{
-		cout<<"ÊäÈë×éÊý£¬Ã¿×éÈËÊý:"<<endl;
+		cout<<"è¾“å…¥ç»„æ•°ï¼Œæ¯ç»„äººæ•°:"<<endl;
 		cin>>Group_number>>departs;
 	}
 	void name_reset()
 	{
-		cout<<"ÊäÈë×ÜÈËÊý£¬×éÊý£¬Ã¿×éÈËÊý"<<endl;
+		cout<<"è¾“å…¥æ€»äººæ•°ï¼Œç»„æ•°ï¼Œæ¯ç»„äººæ•°"<<endl;
 		cin>>Total_number>>Group_number>>departs;
-		cout<<"ÊäÈëêÇ³Æ:"<<endl;
+		cout<<"è¾“å…¥æ˜µç§°:"<<endl;
 		name_get();
 	} 
 	void name_add()
 	{	int a=0;
-		cout<<"ÊäÈëÔö¼ÓÈËÊý:"<<endl;
+		cout<<"è¾“å…¥å¢žåŠ äººæ•°:"<<endl;
 		cin>>a;
 		for(int i=Total_number;i<Total_number+a;i++)
 			cin>>name[i];
@@ -45,10 +45,10 @@ class Group
 	void name_delete()
 	{
 		/*int a,b,c=Total_number;
-		cout<<"ÊäÈëÉ¾³ýÈËÊý:"<<endl;
+		cout<<"è¾“å…¥åˆ é™¤äººæ•°:"<<endl;
 		cin>>a;
 		int bb[100]; 
-		cout<<"ÊäÈëÉ¾³ý³ÉÔ±Î»ÖÃ£¨ÕýÐò£¡£¡£¡0ÊÇµÚÒ»¸ö£©"<<endl;
+		cout<<"è¾“å…¥åˆ é™¤æˆå‘˜ä½ç½®ï¼ˆæ­£åºï¼ï¼ï¼0æ˜¯ç¬¬ä¸€ä¸ªï¼‰"<<endl;
 		for(int i=0;i<a;i++)
 		{
 			cin>>bb[i];
@@ -66,15 +66,15 @@ class Group
 			}
 		}
 		Total_number-=a;
-		mumber_reset();*/
+		mumber_reset();	*/
 		int a=0,node=0;
 		char b;
 		while(node==0)
 		{
 			string name_search[100];
-			cout<<"ÊäÈëÉ¾³ýÈËÊý:"<<endl;
+			cout<<"è¾“å…¥åˆ é™¤äººæ•°:"<<endl;
 			cin>>a;
-			cout<<"ÊäÈëÉ¾³ý³ÉÔ±Ãû×Ö(×¢Òâ´óÐ¡Ð´µÈ):"<<endl;
+			cout<<"è¾“å…¥åˆ é™¤æˆå‘˜åå­—(æ³¨æ„å¤§å°å†™ç­‰):"<<endl;
 			for(int i=0;i<a;i++)
 				cin>>name_search[i];
 			for(int j=0;j<a;j++)
@@ -89,12 +89,12 @@ class Group
 					}
 					else
 					{
-						cout<<"Î´ÕÒµ½"<<name_search[j]<<",Çë¼ì²éÊÇ·ñÕýÈ·¡£"<<endl;
+						cout<<"æœªæ‰¾åˆ°"<<name_search[j]<<",è¯·æ£€æŸ¥æ˜¯å¦æ­£ç¡®ã€‚"<<endl;
 						break;
 					}
 				}
 			}
-			cout<<"É¾³ýÍê³É¡£¼ÌÐøÉ¾³ý[y/n]"<<endl;
+			cout<<"åˆ é™¤å®Œæˆã€‚ç»§ç»­åˆ é™¤[y/n]"<<endl;
 		d0:	cin>>b;
 			if(b=='y')
 				node=0;
@@ -159,13 +159,13 @@ int random(int i)
 int system_order()
 {
 	string sign00;
-a0:	cout<<"ÊÇ·ñ½øÐÐÏÂÒ»´Î·Ö×é[y/n]:"<<endl; 
+a0:	cout<<"æ˜¯å¦è¿›è¡Œä¸‹ä¸€æ¬¡åˆ†ç»„[y/n]:"<<endl; 
 	cin>>sign00;
 	if(sign00=="y") return 1;
 	if(sign00=="n")
 	{
 		string sign0;
-	a1:	cout<<"½øÈëÉèÖÃ½çÃæ»òÍË³ö³ÌÐò[y/n]:"<<endl;
+	a1:	cout<<"è¿›å…¥è®¾ç½®ç•Œé¢æˆ–é€€å‡ºç¨‹åº[y/n]:"<<endl;
 		cin>>sign0;
 		if(sign0=="y")  return 2;
 		if(sign0=="n")  return 0;
@@ -188,13 +188,13 @@ void system_set(int &sign,Group& g0)
 	if(sign==0||sign==1) return;
 	if(sign==2)
 	{	string sign1;
-	a2:	cout<<"·Ö×éÊý»òÃ¿×éÈËÊý[m];ÐÞ¸Ä×ÜÈËÊý[n]:"<<endl;
+	a2:	cout<<"åˆ†ç»„æ•°æˆ–æ¯ç»„äººæ•°[m];ä¿®æ”¹æ€»äººæ•°[n]:"<<endl;
 		cin>>sign1;
 		if(sign1=="m") g0.mumber_reset();
 		if(sign1=="n")
 		{
 			string sign2;
-		a3:	cout<<"Ìí¼Ó³ÉÔ±[a]É¾³ý³ÉÔ±[d]ÖØÖÃ³ÉÔ±[r]:"<<endl;
+		a3:	cout<<"æ·»åŠ æˆå‘˜[a]åˆ é™¤æˆå‘˜[d]é‡ç½®æˆå‘˜[r]:"<<endl;
 			cin>>sign2;
 			if(sign2=="a")  g0.name_add();
 			if(sign2=="d")  g0.name_delete();
@@ -218,11 +218,11 @@ void system_set(int &sign,Group& g0)
 int main()
 {
 	int a,b,c;
-	cout<<"ÊäÈë×ÜÈËÊý£¬×éÊý£¬Ã¿×éÈËÊý"<<endl;
+	cout<<"è¾“å…¥æ€»äººæ•°ï¼Œç»„æ•°ï¼Œæ¯ç»„äººæ•°"<<endl;
 	cin>>a>>b>>c; 
 	Group_depart g0(a,b,c);
 	
-	cout<<"ÊäÈëêÇ³Æ:"<<endl;
+	cout<<"è¾“å…¥æ˜µç§°:"<<endl;
 	g0.name_get();
 	
 	int sign=1,round=0;
