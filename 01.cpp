@@ -44,7 +44,8 @@ class Group
 	}
 	void name_delete()
 	{
-		/*int a,b,c=Total_number;
+		/*
+  		int a,b,c=Total_number;
 		cout<<"输入删除人数:"<<endl;
 		cin>>a;
 		int bb[100]; 
@@ -66,7 +67,8 @@ class Group
 			}
 		}
 		Total_number-=a;
-		mumber_reset();	*/
+		mumber_reset();
+  					*/
 		int a=0,node=0;
 		char b;
 		while(node==0)
